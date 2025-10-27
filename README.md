@@ -1,8 +1,21 @@
-# beast_vpn.sh
-Mobile-API for [BeastVPN](https://play.google.com/store/apps/details?id=com.albvertising.gamersvpn) an application for connecting to a global server of your choice to enjoy unrestricted
+# GuruVpn.cs
+Mobile-API for [GuruVPN](https://guruvpn.com/ru) an application for connecting to a global server of your choice to enjoy unrestricted
 
 ## Example
-```bash
-source ./beast_vpn.sh
-get_servers
+```cs
+using System;
+using GuruVpnApi;
+
+namespace Application
+{
+    internal class Program
+    {
+        static async Task Main()
+        {
+            var api = new GuruVpn();
+            string servers = await api.GetServers();
+            Console.WriteLine(servers);
+        }
+    }
+}
 ```
