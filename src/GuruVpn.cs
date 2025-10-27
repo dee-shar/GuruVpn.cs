@@ -11,7 +11,7 @@ namespace GuruVpnApi
         public GuruVpn()
         {
             httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "okhttp/5.1.0");
+            httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("okhttp/5.1.0");
             httpClient.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
         }
