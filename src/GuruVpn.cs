@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
@@ -15,6 +14,7 @@ namespace GuruVpnApi
             httpClient.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
         }
+        
         public async Task<string> GetServers()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/servers/locations");
