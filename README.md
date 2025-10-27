@@ -3,7 +3,6 @@ Mobile-API for [GuruVPN](https://guruvpn.com/ru) an application for connecting t
 
 ## Example
 ```cs
-using System;
 using GuruVpnApi;
 
 namespace Application
